@@ -41,14 +41,14 @@ $data=mysql_query($query, $con);
    $num = 1;
   while($result=mysql_fetch_assoc($data))
     {
-        $uid = $result['m_state_id'];
+        $uid = $result['state_id'];
     
         echo"
         <tr>
         <td>".$num."</td>
-        <td>".$result['m_state_title']."</td>
-        <td>".$result['m_state_country']."</td>
-        <td>".$result['m_state_status']."</td>
+        <td>".$result['state_title']."</td>
+        <td>".$result['state_country']."</td>
+        <td>".$result['state_status']."</td>
         <td><a href='editstate.php?user=$uid'>Edit</a> | <a href='deletestate.php?user=$uid'>Delete</a></td>
         </tr>
         

@@ -87,7 +87,7 @@
                             <tbody>
  <?php
 require('connect.php');
-$query="select * from lab_tbl";
+$query="select * from lab_tbl where lab_status='0'";
 $data=mysql_query($query, $con);
 //$result= mysql_fetch_assoc($data);
    $num = 1;
@@ -141,7 +141,7 @@ $data=mysql_query($query, $con);
 
 <?php
 require('connect.php');
-$query="select * from doctor_tbl";
+$query="select * from doctor_tbl where doctor_status = '0'";
 $data=mysql_query($query, $con);
 //$result= mysql_fetch_assoc($data);
    $num = 1;

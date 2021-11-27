@@ -2,7 +2,7 @@
   require('connect.php');
   $userid = $_GET['user'];
 
-  $sql = "select * from city_tbl where m_city_id = '$userid'";
+  $sql = "select * from city_tbl where city_id = '$userid'";
   $res = mysql_query($sql, $con);
 
   $usr = mysql_fetch_assoc($res);
@@ -34,16 +34,16 @@
                             <div class="col-md-4">
                                <div class="form-group">
                                     <label>City Name</label>
-                                          <input type="text" class="form-control" name="uname" value="<?php echo $usr['m_city_title']?>">
+                                          <input type="text" class="form-control" name="uname" value="<?php echo $usr['city_title']?>">
                                </div>
                             </div>
-                            <input type="hidden" name="uid" value="<?php echo $usr['m_city_id'] ?>">
+                            <input type="hidden" name="uid" value="<?php echo $usr['city_id'] ?>">
 
 
                             <div class="col-md-4">
                                <div class="form-group">
                                     <label> State</label>
-                                          <input type="text" class="form-control" name="ustate"value="<?php echo $usr['m_city_state']?>">
+                                          <input type="text" class="form-control" name="ustate"value="<?php echo $usr['city_state']?>">
                                </div>
                             </div>
 
@@ -51,7 +51,7 @@
                                <div class="form-group">
                                     <label>Status</label>
                                 
-                                       <?php $st = $usr['m_city_status']; ?>
+                                       <?php $st = $usr['city_status']; ?>
                                                <select name="ustatus" class="form-control">
                                                 <option value="1" <?php if($st == 1){echo'selected';} ?>>Active</option>
                                                  <option value="0" <?php if($st == 0){echo'selected';} ?>>In-Active</option>

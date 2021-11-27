@@ -77,6 +77,7 @@ $data=mysql_query($query, $con);
 </div>
 </div>
 </div>
+
 </div>
 </div>
                    <!--footer-->

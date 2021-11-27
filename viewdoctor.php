@@ -20,7 +20,7 @@ $doc_id=$_GET['user'];
                 <div class="tables">
                    <h2 class="title1">Doctor Detail
                     <span class="pull-right">
-                        <a href="doctors.php" class="btn btn-success">All Labs</a>
+                        <a href="doctors.php" class="btn btn-success">All Doctor</a>
                           <a href="acceptdoctor.php?uid=<?php echo $doc_id ?>"class="btn btn-warning">Accept Doctor</a>
                         <a href="canceldoctor.php?uid=<?php echo $doc_id ?>"class="btn btn-warning">Cancel Doctor</a>               
                      </span></h2>
